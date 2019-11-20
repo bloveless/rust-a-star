@@ -5,7 +5,7 @@ mod shared;
 
 mod breadth_first_search;
 
-const DEBUG: bool = false;
+const DEBUG: bool = true;
 
 use std::env;
 use std::collections::HashMap;
