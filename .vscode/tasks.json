@@ -1,0 +1,48 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Cargo run 10x10",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "run",
+                "mazes/maze-10x10.gif"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Cargo run 20x20",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "run",
+                "mazes/maze-20x20.gif"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "Cargo run 40x40",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "run",
+                "mazes/maze-40x40.gif"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "Cargo run 100x100",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "run",
+                "mazes/maze-100x100.gif"
+            ],
+            "group": "build"
+        }
+    ]
+}
