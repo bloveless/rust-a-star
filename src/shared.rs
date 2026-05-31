@@ -21,7 +21,6 @@ pub struct Graph {
 pub struct GraphNode {
     pub x: u32,
     pub y: u32,
-    pub visited: bool,
     pub relations: Vec<(u32, u32)>,
 }
 

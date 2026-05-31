@@ -49,11 +49,11 @@ fn main() {
         println!("Total time to create the graph: {}us", start_create_graph.elapsed().as_micros());
     }
 
+    breadth_first_search::run(&graph);
+
     if DEBUG {
         println!("Total solve time: {}us", start_time.elapsed().as_micros());
     }
-
-    breadth_first_search::run(&graph);
 
     update_image_pixels(maze, &mut img);
     img.save("output.png").unwrap();
@@ -130,7 +130,6 @@ fn create_graph(maze: &shared::Maze) -> shared::Graph {
                 let mut node = shared::GraphNode {
                     x,
                     y,
-                    visited: false,
                     relations: Vec::new(),
                 };
 
@@ -140,7 +139,6 @@ fn create_graph(maze: &shared::Maze) -> shared::Graph {
                 graph.nodes.insert((x, y), node);
 
                 if x == 0 || y == 0 || x == maze.width - 1 || y == maze.height - 1 {
-                    let terminal_node = graph.nodes.get(&(x, y)).unwrap();
                     graph.terminal_nodes.push((x, y));
                 }
             }
